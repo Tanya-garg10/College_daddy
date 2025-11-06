@@ -161,3 +161,4 @@ window.addEventListener('resize', () => {
         navLinks.classList.remove('active');
     }
 });
+

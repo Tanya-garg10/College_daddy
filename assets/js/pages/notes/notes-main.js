@@ -167,3 +167,5 @@ function addMaterial(semesterId, branchName, subjectName, newMaterial) {
     // Optionally save or update JSON file (depends on backend)
     console.log(`Added material "${newMaterial.title}" successfully.`);
 }
+
+

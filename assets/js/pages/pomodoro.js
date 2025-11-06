@@ -524,3 +524,4 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.classList.remove('timer-active');
     });
 });
+
