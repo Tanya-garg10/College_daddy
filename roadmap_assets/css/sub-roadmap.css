@@ -1095,3 +1095,45 @@ input[type="checkbox"]:checked::after {
         font-size: 0.95rem;
     }
 }
+
+/* ===============================
+   STATUS BADGES + COMPLETION TIME
+================================== */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-left: 8px;
+  color: white;
+}
+
+.badge-beginner {
+  background-color: #4caf50; /* Green */
+}
+
+.badge-intermediate {
+  background-color: #ff9800; /* Orange */
+}
+
+.badge-advanced {
+  background-color: #f44336; /* Red */
+}
+
+.completion-time {
+  font-size: 13px;
+  color: #555;
+  margin-top: 4px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .badge {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+  .completion-time {
+    font-size: 12px;
+  }
+}
