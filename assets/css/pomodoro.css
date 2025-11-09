@@ -99,16 +99,6 @@ main {
 }
 
 /* Original Pomodoro Timer Styles */
-body {
-    background-color: var(--background-color);
-    min-height: 300vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--primary-color);
-    overflow-x: hidden;
-    padding: 2rem;
-}
 
 .container {
     width: 100%;
@@ -132,7 +122,7 @@ body {
 /*-----------circle---------------------------------------------------------------------*/
 .timer-container {
     position: relative;
-    top: 0.5cm;
+    top: 0.2cm;
     position: relative;
     width: min(80vw, 600px);
     height: min(80vw, 600px);
