@@ -28,6 +28,14 @@ function initMobileMenu() {
 function initFeatureCards() {
     const cards = document.querySelectorAll('.feature-card');
     const isMobileDevice = isMobile();
+    
+    // Initializing AOS (scroll fade-up animations)
+    AOS.init({
+        offset:120,
+        duration: 800, // smooth fade duration
+        easing: 'ease-in-out',
+        once: true,
+    });
 
     cards.forEach(card => {
         if (isMobileDevice) {
