@@ -31,6 +31,7 @@ function initFeatureCards() {
     
     // Initializing AOS (scroll fade-up animations)
     AOS.init({
+        offset:120,
         duration: 800, // smooth fade duration
         easing: 'ease-in-out',
         once: true,
