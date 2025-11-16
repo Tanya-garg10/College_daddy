@@ -62,10 +62,10 @@ def admin_upload():
     branch_id = request.form.get('branch')
     subject_id = request.form.get('subject')
     title = request.form.get('title')
-    description = request.form.get('description')
+    description = request.form.get('description', '')  # Optional field, default to empty string
     pdf = request.files.get('pdf')
 
-    if not all([semester_id, branch_id, subject_id, title, description, pdf]):
+    if not all([semester_id, branch_id, subject_id, title, pdf]):
         return jsonify({'success': False, 'message': 'Missing required fields.'}), 400
 
     # Load notes-data.json

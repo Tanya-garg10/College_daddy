@@ -34,6 +34,18 @@
                   "uploadDate": "2025-11-06",
                   "downloadUrl": "/api/download?path=/data/notes/semester-1/physics/physics/microcontroller_module_1___printed_notes__pdf_.pdf",
                   "thumbnailUrl": "/api/thumbnail?path=data/notes\\semester-1\\physics\\physics\\microcontroller_module_1___printed_notes__pdf_.pdf&format=png"
+                },
+                {
+                  "title": "Round_2_ML_Team_-_Email_Template",
+                  "description": "physics notes",
+                  "path": "../data/notes/semester-1/physics/physics/Round_2_ML_Team_-_Email_Template.pdf",
+                  "type": "pdf",
+                  "size": "132.76 KB",
+                  "uploadDate": "2025-11-10",
+                  "downloadUrl": "../data/notes/semester-1/physics/physics/Round_2_ML_Team_-_Email_Template.pdf",
+                  "keywords": [
+                    "physics"
+                  ]
                 }
               ]
             },
@@ -105,7 +117,32 @@
             {
               "id": "ee101",
               "name": "EE",
-              "materials": []
+              "materials": [
+                {
+                  "title": "1599_53_491_MODULE-3_AI___2_",
+                  "description": "ee notes",
+                  "path": "../data/notes/semester-1/physics/ee/1599_53_491_MODULE-3_AI___2_.pdf",
+                  "type": "pdf",
+                  "size": "1.08 MB",
+                  "uploadDate": "2025-11-10",
+                  "downloadUrl": "../data/notes/semester-1/physics/ee/1599_53_491_MODULE-3_AI___2_.pdf",
+                  "keywords": [
+                    "ee"
+                  ]
+                },
+                {
+                  "title": "MVJMATS11",
+                  "description": "ee notes",
+                  "path": "../data/notes/semester-1/physics/ee/MVJMATS11.pdf",
+                  "type": "pdf",
+                  "size": "235.79 KB",
+                  "uploadDate": "2025-11-10",
+                  "downloadUrl": "../data/notes/semester-1/physics/ee/MVJMATS11.pdf",
+                  "keywords": [
+                    "ee"
+                  ]
+                }
+              ]
             }
           ]
         }
@@ -2173,6 +2210,69 @@
                   "keywords": [
                     "mod 1"
                   ]
+                },
+                {
+                  "title": "Module 2",
+                  "description": "Module 2",
+                  "path": "/data/notes/semester-5/cse/ai/MODULE_2_AI.pdf",
+                  "type": "pdf",
+                  "size": "1.3 MB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "/api/download?path=/data/notes/semester-5/cse/ai/MODULE_2_AI.pdf"
+                },
+                {
+                  "title": "Module 3",
+                  "description": "ai",
+                  "path": "/data/notes/semester-5/cse/ai/MODULE-3.pdf",
+                  "type": "pdf",
+                  "size": "1.06 MB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "/api/download?path=/data/notes/semester-5/cse/ai/MODULE-3.pdf"
+                },
+                {
+                  "title": "Module 4",
+                  "description": "ai",
+                  "path": "/data/notes/semester-5/cse/ai/module-4.pdf",
+                  "type": "pdf",
+                  "size": "819.86 KB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "/api/download?path=/data/notes/semester-5/cse/ai/module-4.pdf"
+                },
+                {
+                  "title": "MODULE-3",
+                  "description": "Ai notes",
+                  "path": "../data/notes/semester-5/cse/Ai/MODULE-3.pdf",
+                  "type": "pdf",
+                  "size": "1.06 MB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "../data/notes/semester-5/cse/Ai/MODULE-3.pdf",
+                  "keywords": [
+                    "ai"
+                  ]
+                },
+                {
+                  "title": "module-4",
+                  "description": "Ai notes",
+                  "path": "../data/notes/semester-5/cse/Ai/module-4.pdf",
+                  "type": "pdf",
+                  "size": "819.86 KB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "../data/notes/semester-5/cse/Ai/module-4.pdf",
+                  "keywords": [
+                    "ai"
+                  ]
+                },
+                {
+                  "title": "MODULE_2_AI",
+                  "description": "Ai notes",
+                  "path": "../data/notes/semester-5/cse/Ai/MODULE_2_AI.pdf",
+                  "type": "pdf",
+                  "size": "1.3 MB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "../data/notes/semester-5/cse/Ai/MODULE_2_AI.pdf",
+                  "keywords": [
+                    "ai"
+                  ]
                 }
               ]
             },
@@ -2441,6 +2541,69 @@
                   "keywords": [
                     "sepm",
                     "mod 4"
+                  ]
+                },
+                {
+                  "title": "Module 1 ",
+                  "description": "SEPM Module 1 ",
+                  "path": "/data/notes/semester-5/cse/sepm/SE_Module_1_.pdf",
+                  "type": "pdf",
+                  "size": "944.86 KB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "/api/download?path=/data/notes/semester-5/cse/sepm/SE_Module_1_.pdf"
+                },
+                {
+                  "title": "SE_Module_1_",
+                  "description": "SEPM notes",
+                  "path": "../data/notes/semester-5/cse/SEPM/SE_Module_1_.pdf",
+                  "type": "pdf",
+                  "size": "944.86 KB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "../data/notes/semester-5/cse/SEPM/SE_Module_1_.pdf",
+                  "keywords": [
+                    "sepm"
+                  ]
+                },
+                {
+                  "title": "Module 2",
+                  "description": "Sepm",
+                  "path": "/data/notes/semester-5/cse/sepm/SEPM_Module_2.pdf",
+                  "type": "pdf",
+                  "size": "1.82 MB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "/api/download?path=/data/notes/semester-5/cse/sepm/SEPM_Module_2.pdf"
+                },
+                {
+                  "title": "SEPM_Module_2",
+                  "description": "SEPM notes",
+                  "path": "../data/notes/semester-5/cse/SEPM/SEPM_Module_2.pdf",
+                  "type": "pdf",
+                  "size": "1.82 MB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "../data/notes/semester-5/cse/SEPM/SEPM_Module_2.pdf",
+                  "keywords": [
+                    "sepm"
+                  ]
+                },
+                {
+                  "title": "Module 5",
+                  "description": "Module 5",
+                  "path": "/data/notes/semester-5/cse/sepm/BCS501-module-5-pdf.pdf",
+                  "type": "pdf",
+                  "size": "2.02 MB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "/api/download?path=/data/notes/semester-5/cse/sepm/BCS501-module-5-pdf.pdf"
+                },
+                {
+                  "title": "BCS501-module-5-pdf",
+                  "description": "SEPM notes",
+                  "path": "../data/notes/semester-5/cse/SEPM/BCS501-module-5-pdf.pdf",
+                  "type": "pdf",
+                  "size": "2.02 MB",
+                  "uploadDate": "2025-11-16",
+                  "downloadUrl": "../data/notes/semester-5/cse/SEPM/BCS501-module-5-pdf.pdf",
+                  "keywords": [
+                    "sepm"
                   ]
                 }
               ]

@@ -25,6 +25,16 @@ export function isOffline() {
     return !navigator.onLine;
 }
 
+export function clearOfflineData(key) {
+    try {
+        localStorage.removeItem(key);
+        return true;
+    } catch (error) {
+        console.error("Error clearing offline data:", error);
+        return false;
+    }
+}
+
 // Listen to network changes
 window.addEventListener("online", () => {
     console.log("Back Online");

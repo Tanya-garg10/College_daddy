@@ -399,14 +399,6 @@
 
           <div class="social-links">
             <a
-              href="https://www.instagram.com/collegedaddy.tech/"
-              target="_blank"
-              class="social-link"
-              aria-label="Instagram"
-            >
-              <i class="fab fa-instagram"></i>
-            </a>
-            <a
               href="https://www.linkedin.com/company/collegedaddy-tech"
               target="_blank"
               class="social-link"
@@ -484,25 +476,27 @@
       });
     </script>
     <script type="module" src="offline/offlineCache.js"></script>
+    
+    <!-- Offline Mode Check -->
+    <script>
+      window.addEventListener("load", () => {
+        const banner = document.getElementById("offline-banner");
 
-  </body>
-</html>
-// ------------------- OFFLINE MODE CHECK -------------------
-window.addEventListener("load", () => {
-    const banner = document.getElementById("offline-banner");
-
-    function updateStatus() {
-        if (!navigator.onLine) {
+        function updateStatus() {
+          if (!navigator.onLine) {
             banner.style.display = "block";
             console.log("You are offline");
-        } else {
+          } else {
             banner.style.display = "none";
             console.log("You are online");
+          }
         }
-    }
 
-    updateStatus();
+        updateStatus();
 
-    window.addEventListener("online", updateStatus);
-    window.addEventListener("offline", updateStatus);
-});
+        window.addEventListener("online", updateStatus);
+        window.addEventListener("offline", updateStatus);
+      });
+    </script>
+  </body>
+</html>
