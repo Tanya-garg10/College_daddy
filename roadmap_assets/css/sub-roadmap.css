@@ -1138,3 +1138,7 @@ input[type="checkbox"]:checked::after {
 #faq h2::after {
     display: none !important;
 }
+#faq h2::after {
+    display: none !important;
+}
+
