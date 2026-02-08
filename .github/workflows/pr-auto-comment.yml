@@ -44,7 +44,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: ${{ github.event.pull_request.number }},
-              labels: ['awaiting review', 'wocs']
+              labels: ['awaiting review', 'apertre3.0']
             })
 
       - name: Add thank-you comment when merged
