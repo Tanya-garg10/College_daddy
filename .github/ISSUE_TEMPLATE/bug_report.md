@@ -2,7 +2,7 @@
 name: "Bug Report"
 about: Report a bug or unexpected behavior in College Daddy
 title: "[Bug]: "
-labels: ["bug"]
+labels: ["bug", "apertre3.0"]
 assignees: ""
 ---
 
@@ -37,4 +37,3 @@ Add any other context about the problem here (error messages, console logs, etc.
 - [ ] I've searched for similar issues.
 - [ ] I've tested on multiple browsers/devices.
 - [ ] I've included all relevant information.
-
