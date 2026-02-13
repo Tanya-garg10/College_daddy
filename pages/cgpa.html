@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1XX1WLPNP"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-G1XX1WLPNP');
     </script>
@@ -12,65 +14,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Free CGPA Calculator & Placement Eligibility Checker | College Daddy</title>
-    <meta name="description" content="Easily calculate your CGPA, predict required grades, and check company eligibility with College Daddy's powerful academic tools.">
-    <meta name="keywords" content="CGPA calculator, College Daddy, GPA calculator, academic tools, student success, grade predictor">
-    <meta name="author" content="Tanya Garg">
+    <!-- SEO Meta Tags -->
+    <title>College Daddy - CGPA Calculator & Academic Tools for Students</title>
+    <meta name="description"
+        content="Easily calculate your CGPA, predict required grades, and check company eligibility with College Daddy's powerful academic tools.">
+    <meta name="keywords"
+        content="CGPA calculator, College Daddy, GPA calculator, academic tools, student success, grade predictor">
+    <meta name="author" content="Sachin">
     <meta name="robots" content="index, follow">
 
-    <link rel="icon" type="image/png" href="../favicon.png">
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://collegedaddy.vercel.app/pages/cgpa.html">
 
-    <link rel="canonical" href="https://collegedaddy.vercel.app/cgpa">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "College Daddy CGPA Calculator",
-      "url": "https://collegedaddy.vercel.app",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "All",
-      "description": "Free CGPA Calculator and Job Eligibility Checker for students."
-    }
-    </script>
-
+    <!-- Open Graph / Social Media Tags -->
     <meta property="og:title" content="College Daddy - CGPA Calculator & Academic Tools">
-    <meta property="og:description" content="Calculate your CGPA, predict required scores, and plan your academic success with College Daddy.">
-    <meta property="og:url" content="https://collegedaddy.vercel.app/cgpa">
+    <meta property="og:description"
+        content="Calculate your CGPA, predict required scores, and plan your academic success with College Daddy.">
+    <meta property="og:url" content="https://collegedaddy.vercel.app/pages/cgpa.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="College Daddy">
 
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/css/navigation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../assets/css/cgpa.css">
 
+    <!-- Preload Critical Resources -->
     <link rel="preload" href="../assets/css/cgpa.css" as="style">
     <link rel="preload" href="../assets/js/pages/cgpa.js" as="script">
 
+    <!-- Scripts -->
     <script src="../assets/js/components/navigation.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
     <script src="../assets/js/pages/cgpa.js" defer></script>
-
+    <!-- Theme initialization script - runs before page render to prevent flash -->
     <script>
-      (function() {
-        try {
-          const theme = localStorage.getItem('theme') || 'dark';
-          document.documentElement.setAttribute('data-theme', theme);
-        } catch (e) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        }
-      })();
+        (function () {
+            try {
+                const theme = localStorage.getItem('theme') || 'dark';
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
     </script>
 </head>
 
 <body>
-    <noscript>
-        <p style="background: #ff4d4d; color: white; padding: 1rem; text-align: center;">
-            This tool requires JavaScript to function properly. Please enable it in your browser settings.
-        </p>
-    </noscript>
-
     <header>
         <div class="nav-container">
             <a href="../index.html" class="logo" aria-label="College Daddy Home">
@@ -95,6 +87,7 @@
     </header>
 
     <main class="container">
+        <!-- Existing CGPA Calculator Section -->
         <section id="cgpa-calculator" class="glass-card">
             <div class="section-header">
                 <div class="icon-wrapper">
@@ -103,8 +96,8 @@
                 <h1>Enhanced CGPA Calculator</h1>
                 <div class="header-decoration"></div>
             </div>
-            
-            <form id="cgpaForm" novalidate>
+
+            <form id="cgpaForm" onsubmit="event.preventDefault(); calculate();">
                 <div class="input-row">
                     <div class="input-group">
                         <label for="currentCGPA">
@@ -112,11 +105,14 @@
                             Current CGPA
                         </label>
                         <div class="input-wrapper">
-                            <input type="number" id="currentCGPA" placeholder="Enter current CGPA" step="0.01" min="0" max="10" required>
+                            <input type="number" id="currentCGPA" placeholder="Enter current CGPA" step="0.01" min="0"
+                                max="10" required>
+
                             <div class="tooltip">
                                 <i class="fas fa-question-circle"></i>
                                 <span class="tooltiptext">Enter your current CGPA (0-10)</span>
                             </div>
+
                             <div class="input-decoration"></div>
                         </div>
                     </div>
@@ -127,11 +123,14 @@
                             Completed Semesters
                         </label>
                         <div class="input-wrapper">
-                            <input type="number" id="completedSem" placeholder="Number of semesters done" min="1" max="7" required>
+                            <input type="number" id="completedSem" placeholder="Number of semesters done" min="1"
+                                max="7" required>
+
                             <div class="tooltip">
                                 <i class="fas fa-question-circle"></i>
                                 <span class="tooltiptext">Enter number of completed semesters (1-7)</span>
                             </div>
+
                             <div class="input-decoration"></div>
                         </div>
                     </div>
@@ -142,17 +141,20 @@
                             Target CGPA
                         </label>
                         <div class="input-wrapper">
-                            <input type="number" id="targetCGPA" placeholder="CGPA you want to achieve" step="0.01" min="0" max="10" required>
+                            <input type="number" id="targetCGPA" placeholder="CGPA you want to achieve" step="0.01"
+                                min="0" max="10" required>
+
                             <div class="tooltip">
                                 <i class="fas fa-question-circle"></i>
                                 <span class="tooltiptext">CGPA you want to achieve</span>
                             </div>
+
                             <div class="input-decoration"></div>
                         </div>
                     </div>
                 </div>
 
-                <button type="submit" id="calculateBtn" class="calculate-btn">
+                <button type="submit" class="calculate-btn">
                     <span class="btn-content">
                         <i class="fas fa-chart-line"></i>
                         Calculate Required CGPA
@@ -160,9 +162,9 @@
                     <div class="btn-background"></div>
                 </button>
             </form>
-            
+
             <div id="error" role="alert" aria-live="polite"></div>
-            
+
             <div id="result" aria-live="polite">
                 <div class="result-grid">
                     <div class="result-item">
@@ -180,7 +182,44 @@
                         <div class="label">Remaining Semesters</div>
                     </div>
                 </div>
-                
+
+                <!-- Placement Eligibility Indicator -->
+                <div id="placementEligibility" class="placement-eligibility">
+                    <h3>
+                        <i class="fas fa-briefcase"></i>
+                        Placement Eligibility Status
+                    </h3>
+                    <div class="eligibility-badges" id="eligibilityBadges">
+                        <!-- Badges will be dynamically inserted here -->
+                    </div>
+
+                    <!-- Eligible Companies List -->
+                    <div class="eligible-companies-section" id="eligibleCompaniesSection">
+                        <h4>
+                            <i class="fas fa-building"></i>
+                            Companies You're Eligible For
+                        </h4>
+                        <div class="companies-filter">
+                            <button class="filter-btn active" data-tier="all">All (<span
+                                    id="allCount">0</span>)</button>
+                            <button class="filter-btn" data-tier="S+">S+ Tier (<span id="sPlusCount">0</span>)</button>
+                            <button class="filter-btn" data-tier="A+">A+ Tier (<span id="aPlusCount">0</span>)</button>
+                            <button class="filter-btn" data-tier="A">A Tier (<span id="aCount">0</span>)</button>
+                            <button class="filter-btn" data-tier="B">B Tier (<span id="bCount">0</span>)</button>
+                            <button class="filter-btn" data-tier="C">C Tier (<span id="cCount">0</span>)</button>
+                        </div>
+                        <div class="companies-grid" id="companiesGrid">
+                            <!-- Company cards will be dynamically inserted here -->
+                        </div>
+                    </div>
+
+                    <div class="eligibility-note">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Note: Eligibility criteria may vary by company. This is a general indicator based on
+                            common industry standards.</span>
+                    </div>
+                </div>
+
                 <div class="charts-container">
                     <div class="chart-wrapper">
                         <canvas id="progressChart" aria-label="CGPA Progress Chart" role="img"></canvas>
@@ -192,6 +231,7 @@
             </div>
         </section>
 
+        <!-- New Company Eligibility Section -->
         <section id="company-eligibility" class="eligibility-section">
             <h2>
                 <i class="fas fa-building"></i>
@@ -201,29 +241,36 @@
             <div class="tier-info">
                 <h3>CTC Tiers</h3>
                 <div class="tier-grid">
-                    <div class="tier-item"><h4>S+ Tier</h4><p>₹30+ LPA</p></div>
-                    <div class="tier-item"><h4>A+ Tier</h4><p>₹20-30 LPA</p></div>
-                    <div class="tier-item"><h4>A Tier</h4><p>₹10-20 LPA</p></div>
-                    <div class="tier-item"><h4>B Tier</h4><p>₹5-10 LPA</p></div>
-                    <div class="tier-item"><h4>C Tier</h4><p>Below ₹5 LPA</p></div>
+                    <div class="tier-item">
+                        <h4>S+ Tier</h4>
+                        <p>₹30+ LPA</p>
+                    </div>
+                    <div class="tier-item">
+                        <h4>A+ Tier</h4>
+                        <p>₹20-30 LPA</p>
+                    </div>
+                    <div class="tier-item">
+                        <h4>A Tier</h4>
+                        <p>₹10-20 LPA</p>
+                    </div>
+                    <div class="tier-item">
+                        <h4>B Tier</h4>
+                        <p>₹5-10 LPA</p>
+                    </div>
+                    <div class="tier-item">
+                        <h4>C Tier</h4>
+                        <p>Below ₹5 LPA</p>
+                    </div>
                 </div>
             </div>
 
             <div class="eligibility-results">
-                <div id="placementStatusBadge" class="placement-badge"></div>
                 <div class="result-card">
                     <h3>Your Eligibility Summary</h3>
                     <div class="eligibility-stats">
                         <div class="stat-item">
                             <span class="stat-label">Eligible Companies</span>
                             <span class="stat-value" id="eligibleCount">0/114</span>
-                            <div class="eligibility-progress">
-                                 <div id="eligibilityBar" 
-                                      role="progressbar" 
-                                      aria-valuemin="0" 
-                                      aria-valuemax="100" 
-                                      aria-valuenow="0"></div>
-                            </div>
                         </div>
                         <div class="stat-item">
                             <span class="stat-label">Your CGPA</span>
@@ -233,24 +280,39 @@
                     <div class="tier-distribution">
                         <h4>Company Tiers Distribution</h4>
                         <div class="tier-stats">
-                            <div class="tier-stat"><span>S+</span><span id="sPlusTier">0</span></div>
-                            <div class="tier-stat"><span>A+</span><span id="aPlusTier">0</span></div>
-                            <div class="tier-stat"><span>A</span><span id="aTier">0</span></div>
-                            <div class="tier-stat"><span>B</span><span id="bTier">0</span></div>
-                            <div class="tier-stat"><span>C</span><span id="cTier">0</span></div>
+                            <div class="tier-stat">
+                                <span>S+</span>
+                                <span id="sPlusTier">0</span>
+                            </div>
+                            <div class="tier-stat">
+                                <span>A+</span>
+                                <span id="aPlusTier">0</span>
+                            </div>
+                            <div class="tier-stat">
+                                <span>A</span>
+                                <span id="aTier">0</span>
+                            </div>
+                            <div class="tier-stat">
+                                <span>B</span>
+                                <span id="bTier">0</span>
+                            </div>
+                            <div class="tier-stat">
+                                <span>C</span>
+                                <span id="cTier">0</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        <!-- Related Tools Section -->
         <section class="related-tools">
             <h2>More College Daddy Academic Tools</h2>
             <div class="tools-container">
                 <a href="iacal.html" class="tool-card">
                     <i class="fas fa-calculator" aria-hidden="true"></i>
                     <h3>IA Calculator</h3>
-                    <p>Calculate and track your academic performance with College Daddy</p>
+                    <p>Calculate and track your academic performance with College Daddy's CGPA Calculator</p>
                 </a>
                 <a href="pomodoro.html" class="tool-card">
                     <i class="fas fa-clock" aria-hidden="true"></i>
@@ -260,7 +322,7 @@
                 <a href="notes.html" class="tool-card">
                     <i class="fas fa-sticky-note" aria-hidden="true"></i>
                     <h3>Notes</h3>
-                    <p>Organize your academic notes with College Daddy's tools</p>
+                    <p>Organize your academic notes with College Daddy's Note-taking Tool</p>
                 </a>
             </div>
         </section>
@@ -271,34 +333,39 @@
             <div class="footer-section">
                 <h3>College Daddy</h3>
                 <p>Your ultimate companion for academic success.</p>
-                <p class="tagline">Developed for students by Tanya Garg.</p>
+                <p class="tagline">Developed with students in mind, for students by a student.</p>
+
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/company/collegedaddy-tech" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/company/collegedaddy-tech" target="_blank" class="social-link"
+                        aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="cgpa.html">CGPA Calculator</a></li>
-                    <li><a href="notes.html">Notes</a></li>
-                    <li><a href="roadmap.html">Roadmap</a></li>
+                    <li><a href="../index.html">College Daddy Home</a></li>
+                    <li><a href="../pages/cgpa.html">College Daddy CGPA Calculator</a></li>
+                    <li><a href="../pages/notes.html">College Daddy Notes</a></li>
+                    <li><a href="../pages/roadmap.html">College Daddy Roadmap</a></li>
                 </ul>
             </div>
-            
+
             <div class="footer-section">
                 <h3>Connect</h3>
-                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSciD1CUiYUpiz4mtQSTYG9XeCRyG3CEhr9GNL03WxmRbFOgkw/viewform?usp=dialog" target="_blank" class="feedback-link">Send Feedback</a></p>
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSciD1CUiYUpiz4mtQSTYG9XeCRyG3CEhr9GNL03WxmRbFOgkw/viewform?usp=dialog"
+                        target="_blank" class="feedback-link">Send Feedback to College Daddy</a></p>
+                <p>Follow our journey on social media for updates and resources.</p>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
-            <p>&copy; 2025 College Daddy. All rights reserved. Developed by <span class="developer-name">Tanya Garg</span></p>
+            <p>&copy; 2025 College Daddy. All rights reserved. Developed by <span class="developer-name">Sachin</span>
+            </p>
         </div>
     </footer>
+</body>
 
-    </body>
 </html>
